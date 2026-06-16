@@ -26,7 +26,6 @@ navMenu.querySelectorAll('.nav-link').forEach(link => {
 });
 
 
-});
 
 /* ── Favourite (heart) toggle ───────────────────────────────── */
 document.querySelectorAll('.tour-fav').forEach(btn => {
