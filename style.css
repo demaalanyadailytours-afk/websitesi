@@ -2078,3 +2078,21 @@ html, body {
 .lang-dropdown-content.show {
   display: block;
 }
+
+/* FIX LOGO SIZE OVERRIDE ON MOBILE */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 60px !important;
+    width: auto !important;
+    max-width: 250px !important;
+    object-fit: contain !important;
+  }
+  .footer-logo {
+    height: 70px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+  .logo-group {
+    justify-content: flex-start !important;
+  }
+}
