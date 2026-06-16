@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tüm Turlar - Dema Tours</title>
+<meta content="Alanya'nın en güzel turlarını keşfedin." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+    .page-banner {
+      position: relative;
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      padding: 160px 32px 100px;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,20,40,0.85) 0%, rgba(30,107,184,0.6) 100%);
+      z-index: 1;
+    }
+    .page-banner-title, .page-banner-desc {
+      position: relative;
+      z-index: 2;
+    }
+    .page-banner-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .page-banner-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .all-tours-section {
+      padding: 80px 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+      min-height: 50vh;
+    }
+  </style>
+</head>
+<body style="background: #f7f9fc;">
+<!-- TOP INFO BAR -->
+<div class="topbar">
+<div class="topbar-inner">
+<div class="topbar-left">
+<span class="topbar-item">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <a href="https://maps.app.goo.gl/gWSrLL4P85QzDbNf7" target="_blank" style="color:inherit; text-decoration:none;">Antalya / Alanya</a>
+        </span>
+<span class="topbar-divider">|</span>
+<span class="topbar-item">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.73a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          0551 433 60 45
+        </span>
+<span class="topbar-divider">|</span>
+<a class="topbar-item topbar-link" href="#">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+</div>
+<div class="topbar-right">
+<div class="lang-switcher">
+<button class="lang-btn active">TR</button>
+<button class="lang-btn">EN</button>
+<button class="lang-btn">RU</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN NAVIGATION -->
+<header class="navbar" id="navbar" style="background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+<div class="navbar-inner">
+<div class="logo-group">
+<a class="logo-link" href="index.html">
+<img alt="Dema Tours Logo" class="logo-img" src="LOGO.png"/>
+</a>
+<div class="logo-badge">
+<span class="badge-name">HAVAİ CİNDERELLA</span>
+<span class="badge-doc">BELGE NO: 17770</span>
+</div>
+</div>
+<nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+<a class="nav-link active" href="tours.html">Turlar</a>
+<a class="nav-link" href="index.html#activitiesSection">Aktiviteler</a>
+<a class="nav-link" href="blog.html">Blog</a>
+        <a href="iletisim.html" class="nav-link">İletişim</a>
+</nav>
+<div class="nav-actions">
+<button aria-label="Menü" class="hamburger" id="hamburger">
+<span style="background:var(--navy)"></span><span style="background:var(--navy)"></span><span style="background:var(--navy)"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- PAGE BANNER -->
+<div class="page-banner">
+<h1 class="page-banner-title">Tüm Turlar</h1>
+<p class="page-banner-desc">Alanya'nın güzelliklerini keşfetmeniz için hazırladığımız özel tur ve gezi seçeneklerimizi inceleyin.</p>
+</div>
+<!-- ALL TOURS LIST -->
+<section class="all-tours-section">
+
+      
+      <div class="tour-filters-wrapper">
+        <div class="tour-filters">
+          <button class="filter-btn active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="alanya">Alanya Turları</button>
+          <button class="filter-btn" data-filter="side">Side Turları</button>
+          <button class="filter-btn" data-filter="belek">Belek Turları</button>
+        </div>
+
+        <div class="activity-dropdown">
+          <button class="activity-dropbtn" id="activityDropBtn">
+            <i class="fa-solid fa-layer-group"></i> Aktiviteler <i class="fa-solid fa-chevron-down" style="font-size: 12px; margin-left: 4px;"></i>
+          </button>
+          <div class="activity-dropdown-content" id="activityDropContent">
+            <button class="filter-drop-item" data-filter="jeep">Jeep Safari</button>
+            <button class="filter-drop-item" data-filter="rafting">Rafting</button>
+            <button class="filter-drop-item" data-filter="atv">ATV Safari</button>
+            <button class="filter-drop-item" data-filter="buggy">Buggy Turu</button>
+            <button class="filter-drop-item" data-filter="dalis">Dalış Turu</button>
+            <button class="filter-drop-item" data-filter="tekne">Tekne Turu</button>
+          </div>
+        </div>
+      </div>
+
+
+<div class="tours-grid-4">
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-1.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Tekne Turu" src="suluada.png"/>
+<div class="tour-img-overlay">
+<h3>Alanya Tekne Turu</h3>
+<p>Antalya Çıkışlı</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>810 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-1.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="jeep alanya">
+<a class="tour-card-img-new" href="tour-2.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Jeep Safari Turu" src="blog_jeep.png"/>
+<div class="tour-img-overlay">
+<h3>Alanya Jeep Safari Turu</h3>
+<p>Toros Dağları'nda Macera</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-2.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting alanya">
+<a class="tour-card-img-new" href="tour-3.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Rafting Turu" src="rafting.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Rafting Turu</h3>
+<p>Adrenalin Dolu Bir Macera</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>972 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-3.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="atv alanya">
+<a class="tour-card-img-new" href="tour-4.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Atv Safari Turu" src="atv_safari.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Atv Safari Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-4.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-5.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Sapadere Kanyon Turu" src="tour_img_5.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Sapadere Kanyon Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-5.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-6.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan The Land Of Legends Gece Turu" src="tour_img_6.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan The Land Of Legends Gece Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>972 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-6.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-7.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Şehir &amp; Tekne Kombo Turu" src="tour_img_7.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Şehir &amp; Tekne Kombo Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-7.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-8.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Side-Manavgat-Gizli Cennet Turu" src="tour_img_8.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Side-Manavgat-Gizli Cennet Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-8.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-9.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Green Canyon Turu" src="tour_img_9.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Green Canyon Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-9.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-10.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Gazipaşa Delik Deniz ve Kral Koyu Turu" src="tour_img_10.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Gazipaşa Delik Deniz ve Kral Koyu Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-10.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-11.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Sapadere Kanyonu ve Dim Çayı Combo Turu" src="tour_img_11.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Sapadere Kanyonu ve Dim Çayı Combo Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-11.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-12.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Tazı Kanyon Turu" src="tour_img_12.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Tazı Kanyon Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-12.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="buggy alanya">
+<a class="tour-card-img-new" href="tour-13.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Buggy Safari Turu" src="tour_img_13.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Buggy Safari Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-13.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-14.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Katamaran Tekne Turu" src="tour_img_14.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Katamaran Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1080 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-14.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-15.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Relax Tekne Turu" src="tour_img_15.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Relax Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-15.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="dalis alanya">
+<a class="tour-card-img-new" href="tour-16.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Dalış Turu" src="tour_img_16.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Dalış Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-16.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-17.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Gün Batımı Tekne Turu" src="tour_img_17.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Gün Batımı Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1080 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-17.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-18.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Yeşil Kanyon Cabrio Safari ve Aslan Parkı Turu" src="tour_img_18.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Yeşil Kanyon Cabrio Safari ve Aslan Parkı Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-18.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-19.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Side Gece Turu ve Green Lake Tekne Turu" src="tour_img_19.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Side Gece Turu ve Green Lake Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2160 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-19.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="jeep alanya">
+<a class="tour-card-img-new" href="tour-20.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Jeep Safari Gece Turu" src="tour_img_20.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Jeep Safari Gece Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-20.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-21.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Şehir ve Teleferik Turu" src="tour_img_21.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Şehir ve Teleferik Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-21.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-22.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Starcraft Tekne Turu" src="tour_img_22.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Starcraft Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-22.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-23.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'da 5'i 1 Arada Süper Kombo Turu" src="tour_img_23.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'da 5'i 1 Arada Süper Kombo Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-23.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting alanya">
+<a class="tour-card-img-new" href="tour-24.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Tazı Canyon ve Rafting Turu" src="tour_img_24.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Tazı Canyon ve Rafting Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-24.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting buggy alanya">
+<a class="tour-card-img-new" href="tour-25.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Buggy-Rafting-Zipline Turu" src="tour_img_25.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Buggy-Rafting-Zipline Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-25.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting alanya">
+<a class="tour-card-img-new" href="tour-26.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Kanyon-Rafting-Zipline Turu" src="tour_img_26.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Kanyon-Rafting-Zipline Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-26.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-27.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Salda Gölü ve Pamukkale Turu" src="tour_img_27.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Salda Gölü ve Pamukkale Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2430 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-27.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-28.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan 2 Günlük Kapadokya Turu" src="tour_img_28.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan 2 Günlük Kapadokya Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2700 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-28.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-29.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Demre-Kekova-Myra Turu" src="tour_img_29.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Demre-Kekova-Myra Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2970 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-29.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-30.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Adrasan Suluada Tekne Turu" src="tour_img_30.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Adrasan Suluada Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-30.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-31.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Manavgat Tekne Turu" src="tour_img_31.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Manavgat Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-31.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-32.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Yamaç Paraşütü Turu" src="tour_img_32.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Yamaç Paraşütü Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>3510 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-32.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-33.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Türk Hamamı Turu" src="tour_img_33.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Türk Hamamı Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1080 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-33.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-34.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan 3 Günlük Kapadokya Turu" src="tour_img_34.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan 3 Günlük Kapadokya Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>7560 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-34.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-35.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan Aspendos-Side-Manavgat Turu" src="tour_img_35.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan Aspendos-Side-Manavgat Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2970 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-35.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-36.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'dan The Land Of Legends Turu" src="tour_img_36.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'dan The Land Of Legends Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>4590 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-36.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-37.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Yunus Gösterisi Turu" src="tour_img_37.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Yunus Gösterisi Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-37.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-38.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Aquapark Turu" src="tour_img_38.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Aquapark Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>3240 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-38.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne alanya">
+<a class="tour-card-img-new" href="tour-39.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'da Özel Tekne Turu" src="tour_img_39.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'da Özel Tekne Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>Fiyat Sorunuz</strong></div>
+<a class="btn-book blue" href="tour-39.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-40.html" style="display: block; text-decoration: none;">
+<img alt="Alanya'da Köy Turu" src="tour_img_40.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya'da Köy Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-40.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-41.html" style="display: block; text-decoration: none;">
+<img alt="Alanya At Binme Turu" src="tour_img_41.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya At Binme Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2970 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-41.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-42.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Şehir ve Dim Çayı Turu" src="tour_img_42.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Şehir ve Dim Çayı Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-42.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="alanya">
+<a class="tour-card-img-new" href="tour-43.html" style="display: block; text-decoration: none;">
+<img alt="Alanya Şehir ve Sapadere Kanyonu Turu" src="tour_img_43.webp"/>
+<div class="tour-img-overlay">
+<h3>Alanya Şehir ve Sapadere Kanyonu Turu</h3>
+<p>Harika Bir Deneyim</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-43.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne side">
+<a class="tour-card-img-new" href="tour-47.html" style="display: block; text-decoration: none;">
+<img alt="Side Yunus Adası Tekne Turu" src="tour_img_47.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Yunus Adası Tekne Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1188 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-47.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side jeep">
+<a class="tour-card-img-new" href="tour-48.html" style="display: block; text-decoration: none;">
+<img alt="Side Jeep Safari Turu" src="tour_img_48.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Jeep Safari Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-48.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting side">
+<a class="tour-card-img-new" href="tour-49.html" style="display: block; text-decoration: none;">
+<img alt="Side Rafting Turu" src="tour_img_49.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Rafting Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>972 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-49.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="atv side">
+<a class="tour-card-img-new" href="tour-50.html" style="display: block; text-decoration: none;">
+<img alt="Side Quad (ATV) Safari Turu" src="tour_img_50.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Quad (ATV) Safari Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1512 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-50.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-51.html" style="display: block; text-decoration: none;">
+<img alt="Side’den The Land Of Legends Gece Turu" src="tour_img_51.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den The Land Of Legends Gece Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>810 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-51.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne side">
+<a class="tour-card-img-new" href="tour-52.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Manavgat Tekne Turu" src="tour_img_52.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Manavgat Tekne Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1080 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-52.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-53.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Yeşil Kanyon Turu" src="tour_img_53.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Yeşil Kanyon Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-53.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne side">
+<a class="tour-card-img-new" href="tour-54.html" style="display: block; text-decoration: none;">
+<img alt="Side Tekne Turu" src="tour_img_54.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Tekne Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1188 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-54.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne side">
+<a class="tour-card-img-new" href="tour-55.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Alanya Starcraft Tekne Turu" src="tour_img_55.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Alanya Starcraft Tekne Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-55.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-56.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Yeşil Kanyon Cabrio Safari ve Aslan Parkı Turu" src="tour_img_56.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Yeşil Kanyon Cabrio Safari ve Aslan Parkı Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1188 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-56.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="dalis side">
+<a class="tour-card-img-new" href="tour-57.html" style="display: block; text-decoration: none;">
+<img alt="Side Dalış Turu" src="tour_img_57.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Dalış Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-57.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-58.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Tazı Kanyon Turu" src="tour_img_58.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Tazı Kanyon Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-58.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-59.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Antalya Şehir Turu" src="tour_img_59.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Antalya Şehir Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-59.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-60.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Alanya Şehir Turu" src="tour_img_60.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Alanya Şehir Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-60.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-61.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Sapadere Kanyon Turu" src="tour_img_61.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Sapadere Kanyon Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-61.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-62.html" style="display: block; text-decoration: none;">
+<img alt="Side 5’i 1 Arada Süper Kombo Turu" src="tour_img_62.webp"/>
+<div class="tour-img-overlay">
+<h3>Side 5’i 1 Arada Süper Kombo Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-62.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting side">
+<a class="tour-card-img-new" href="tour-63.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Tazı Canyon ve Rafting Turu" src="tour_img_63.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Tazı Canyon ve Rafting Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-63.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting side buggy">
+<a class="tour-card-img-new" href="tour-64.html" style="display: block; text-decoration: none;">
+<img alt="Side Buggy-Rafting-Zipline Turu" src="hero-bg.jpg"/>
+<div class="tour-img-overlay">
+<h3>Side Buggy-Rafting-Zipline Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-64.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting side">
+<a class="tour-card-img-new" href="tour-65.html" style="display: block; text-decoration: none;">
+<img alt="Side Kanyoning–Rafting–Zipline Turu" src="hero-bg.jpg"/>
+<div class="tour-img-overlay">
+<h3>Side Kanyoning–Rafting–Zipline Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>972 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-65.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side buggy">
+<a class="tour-card-img-new" href="tour-66.html" style="display: block; text-decoration: none;">
+<img alt="Side Buggy Safari Turu" src="tour_img_66.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Buggy Safari Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-66.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne side">
+<a class="tour-card-img-new" href="tour-67.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Adrasan – Suluada Tekne Turu" src="hero-bg.jpg"/>
+<div class="tour-img-overlay">
+<h3>Side’den Adrasan – Suluada Tekne Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-67.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-68.html" style="display: block; text-decoration: none;">
+<img alt="Side’den 2 Günlük Kapadokya Turu" src="tour_img_68.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den 2 Günlük Kapadokya Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2700 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-68.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-69.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Salda Gölü ve Pamukkale Turu" src="tour_img_69.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Salda Gölü ve Pamukkale Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2430 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-69.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-70.html" style="display: block; text-decoration: none;">
+<img alt="Side’den Demre-Myra-Kekova Turu" src="tour_img_70.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den Demre-Myra-Kekova Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2970 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-70.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-71.html" style="display: block; text-decoration: none;">
+<img alt="Side’den The Land Of Legends Turu" src="tour_img_71.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den The Land Of Legends Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>4320 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-71.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-72.html" style="display: block; text-decoration: none;">
+<img alt="Side Yunus Gösterisi Turu" src="tour_img_72.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Yunus Gösterisi Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-72.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-73.html" style="display: block; text-decoration: none;">
+<img alt="Side’de Türk Hamamı Turu" src="tour_img_73.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’de Türk Hamamı Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1080 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-73.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-74.html" style="display: block; text-decoration: none;">
+<img alt="Side Yamaç Paraşütü Turu" src="tour_img_74.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Yamaç Paraşütü Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>3780 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-74.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="side">
+<a class="tour-card-img-new" href="tour-75.html" style="display: block; text-decoration: none;">
+<img alt="Side’den 3 Günlük Kapadokya Turu" src="tour_img_75.webp"/>
+<div class="tour-img-overlay">
+<h3>Side’den 3 Günlük Kapadokya Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>7560 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-75.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne side">
+<a class="tour-card-img-new" href="tour-76.html" style="display: block; text-decoration: none;">
+<img alt="Side Özel Yat Turu" src="tour_img_76.webp"/>
+<div class="tour-img-overlay">
+<h3>Side Özel Yat Turu</h3>
+<p>Side'nin Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>972 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-76.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-80.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten The Land of Legends Turu" src="tour_img_80.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten The Land of Legends Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>4320 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-80.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting buggy belek">
+<a class="tour-card-img-new" href="tour-81.html" style="display: block; text-decoration: none;">
+<img alt="Belek Buggy – Rafting – Zipline Turu" src="tour_img_81.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Buggy – Rafting – Zipline Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-81.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting belek">
+<a class="tour-card-img-new" href="tour-82.html" style="display: block; text-decoration: none;">
+<img alt="Belek Rafting Turu" src="tour_img_82.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Rafting Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>972 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-82.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-83.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten 2 Günlük Kapadokya Turu" src="tour_img_83.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten 2 Günlük Kapadokya Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2700 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-83.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-84.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Perge – Aspendos – Side Turu" src="tour_img_84.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Perge – Aspendos – Side Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>3780 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-84.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-85.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Salda Gölü ve Pamukkale Turu" src="tour_img_85.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Salda Gölü ve Pamukkale Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>243108 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-85.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="dalis belek">
+<a class="tour-card-img-new" href="tour-86.html" style="display: block; text-decoration: none;">
+<img alt="Belek Dalış Turu" src="tour_img_86.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Dalış Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-86.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="atv belek">
+<a class="tour-card-img-new" href="tour-87.html" style="display: block; text-decoration: none;">
+<img alt="Belek Quad (ATV) Safari Turu" src="tour_img_87.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Quad (ATV) Safari Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-87.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-88.html" style="display: block; text-decoration: none;">
+<img alt="Belek Yamaç Paraşütü Turu" src="tour_img_88.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Yamaç Paraşütü Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>4050 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-88.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne belek">
+<a class="tour-card-img-new" href="tour-89.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Mega Star Kemer Tekne Turu" src="tour_img_89.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Mega Star Kemer Tekne Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-89.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne belek">
+<a class="tour-card-img-new" href="tour-90.html" style="display: block; text-decoration: none;">
+<img alt="Belek Özel Yat Turu" src="tour_img_90.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Özel Yat Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1000 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-90.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-91.html" style="display: block; text-decoration: none;">
+<img alt="Belek’te Türk Hamamı Turu" src="tour_img_91.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’te Türk Hamamı Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-91.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-92.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Green Canyon, Manavgat Şelalesi ve Hayvanat Bahçesi Turu" src="tour_img_92.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Green Canyon, Manavgat Şelalesi ve Hayvanat Bahçesi Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2160 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-92.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="jeep belek">
+<a class="tour-card-img-new" href="tour-93.html" style="display: block; text-decoration: none;">
+<img alt="Belek Jeep Safari Turu" src="tour_img_93.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Jeep Safari Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-93.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-94.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Demre – Myra – Kekova Turu" src="tour_img_94.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Demre – Myra – Kekova Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2970 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-94.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne belek">
+<a class="tour-card-img-new" href="tour-95.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Adrasan – Suluada Tekne Turu" src="tour_img_95.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Adrasan – Suluada Tekne Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-95.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-96.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten 3 Günlük Kapadokya Turu" src="tour_img_96.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten 3 Günlük Kapadokya Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>7560 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-96.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne belek">
+<a class="tour-card-img-new" href="tour-97.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Manavgat Tekne Turu" src="tour_img_97.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Manavgat Tekne Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-97.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-98.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Antalya Akvaryum Turu" src="tour_img_98.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Antalya Akvaryum Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>2700 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-98.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne belek">
+<a class="tour-card-img-new" href="tour-99.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Gonster Korsan Tekne Turu" src="tour_img_99.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Gonster Korsan Tekne Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-99.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne belek">
+<a class="tour-card-img-new" href="tour-100.html" style="display: block; text-decoration: none;">
+<img alt="Belek Korsan Tekne Turu" src="tour_img_100.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Korsan Tekne Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-100.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-101.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Yeşil Kanyon Turu" src="tour_img_101.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Yeşil Kanyon Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-101.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="buggy belek">
+<a class="tour-card-img-new" href="tour-102.html" style="display: block; text-decoration: none;">
+<img alt="Belek Buggy Safari Turu" src="tour_img_102.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Buggy Safari Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-102.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="rafting belek">
+<a class="tour-card-img-new" href="tour-103.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Tazı Kanyonu ve Rafting Turu" src="tour_img_103.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Tazı Kanyonu ve Rafting Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-103.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-104.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Antalya Şehir Turu" src="tour_img_104.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Antalya Şehir Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1350 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-104.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-105.html" style="display: block; text-decoration: none;">
+<img alt="Belek Yunus Gösterisi Turu" src="tour_img_105.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek Yunus Gösterisi Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-105.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-106.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Tazı Kanyon Turu" src="tour_img_106.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Tazı Kanyon Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1890 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-106.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="belek">
+<a class="tour-card-img-new" href="tour-107.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten The Land of Legends Gece Turu" src="tour_img_107.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten The Land of Legends Gece Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>810 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-107.html">Rezervasyon Yap</a>
+</div>
+</div>
+<div class="tour-card-new" data-category="tekne belek">
+<a class="tour-card-img-new" href="tour-108.html" style="display: block; text-decoration: none;">
+<img alt="Belek’ten Antalya Relax Tekne Turu" src="tour_img_108.webp"/>
+<div class="tour-img-overlay">
+<h3>Belek’ten Antalya Relax Tekne Turu</h3>
+<p>Belek'in Eşsiz Güzellikleri</p>
+</div>
+</a>
+<div class="tour-card-body-new">
+<div class="tour-price-new"><strong>1620 ₺</strong>'den itibaren</div>
+<a class="btn-book blue" href="tour-108.html">Rezervasyon Yap</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo-group footer-logo-group">
+<a class="logo-link" href="index.html">
+<img alt="Dema Tours Logo" class="footer-logo" src="LOGO.png"/>
+</a>
+<div class="logo-badge">
+<span class="badge-name">HAVAİ CİNDERELLA</span>
+<span class="badge-doc">BELGE NO: 17770</span>
+</div>
+</div>
+<p class="footer-desc">Alanya'nın en seçkin günlük turları ve macera aktiviteleri ile tatilinize unutulmaz anılar katın.</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Dema Turizm. Tüm hakları saklıdır. Belge No: 17770 (Havai Cinderella)</p>
+</div>
+</div>
+</footer>
+<script src="main.js"></script>
+
+<!-- Google Translate -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'tr', includedLanguages: 'en,tr,ru', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

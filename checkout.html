@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rezervasyon Tamamlama - Dema Tours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .checkout-container { max-width: 1200px; margin: 60px auto 100px; padding: 0 32px; }
+    .checkout-header { margin-bottom: 40px; }
+    .checkout-header h1 { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 36px; margin-bottom: 12px; }
+    .checkout-header p { color: var(--text-dark); font-size: 16px; }
+    
+    .checkout-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: start; }
+    
+    .checkout-form-panel { background: white; padding: 40px; border-radius: var(--r-md); box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
+    .checkout-form-panel h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px; }
+    
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13.5px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 14px 16px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 14px; background: #f8fafc; transition: all 0.2s; }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--blue); background: white; box-shadow: 0 0 0 3px rgba(30,107,184,0.1); }
+    
+    .phone-input-wrap { display: flex; border: 1px solid #cbd5e1; border-radius: 6px; overflow: hidden; background: #f8fafc; }
+    .phone-prefix { display: flex; align-items: center; padding: 0 12px; border-right: 1px solid #cbd5e1; font-size: 14px; background: #e2e8f0; font-weight: 600; }
+    .phone-input-wrap input { border: none; border-radius: 0; background: transparent; }
+    .phone-input-wrap:focus-within { border-color: var(--blue); background: white; box-shadow: 0 0 0 3px rgba(30,107,184,0.1); }
+    
+    .checkout-sidebar { background: #f8fafc; padding: 32px; border-radius: var(--r-md); border: 2px solid var(--navy); position: sticky; top: 120px; }
+    .checkout-sidebar h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.05em; }
+    
+    .order-summary-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+    .order-summary-table th { text-align: left; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; font-size: 13px; color: var(--text-mid); }
+    .order-summary-table td { padding: 16px 0; border-bottom: 1px solid #e2e8f0; font-size: 14.5px; color: var(--text-dark); }
+    .order-summary-table th.right, .order-summary-table td.right { text-align: right; }
+    .order-item-title { font-weight: 700; color: var(--navy); display: block; margin-bottom: 6px; }
+    .order-item-meta { font-size: 12px; color: var(--text-mid); display: block; margin-bottom: 2px; }
+    
+    .order-total-row td { font-size: 18px; font-weight: 800; color: var(--navy); border-bottom: none; padding-top: 24px; }
+    
+    .payment-notice { background: rgba(30,107,184,0.1); color: var(--blue); padding: 12px 16px; border-radius: 6px; font-size: 13.5px; font-weight: 600; margin-bottom: 32px; display: flex; align-items: flex-start; gap: 10px; }
+    .payment-notice i { margin-top: 3px; }
+    
+    .action-buttons { display: flex; flex-direction: column; gap: 12px; }
+    .btn-action { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 16px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; border: none; text-decoration: none; }
+    .btn-action i { font-size: 18px; }
+    
+    .btn-wa { background: #25D366; color: white; }
+    .btn-wa:hover { background: #1ebc59; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37,211,102,0.3); }
+    
+    .btn-tg { background: #0088cc; color: white; }
+    .btn-tg:hover { background: #0077b5; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,136,204,0.3); }
+    
+    .btn-sys { background: var(--navy); color: var(--gold); }
+    .btn-sys:hover { background: #1a2a4a; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(10,20,40,0.3); }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .checkout-grid { grid-template-columns: 1fr; }
+      .checkout-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body style="background: #f1f5f9;">
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" style="background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+    <div class="navbar-inner">
+      <div class="logo-group">
+        <a href="index.html" class="logo-link">
+          <img src="LOGO.png" alt="Dema Tours Logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-menu" style="flex:1; justify-content:flex-end;">
+        <a href="index.html" class="nav-link">Ana Sayfaya Dön</a>
+      
+        <a href="iletisim.html" class="nav-link">İletişim</a>
+</nav>
+    </div>
+  </header>
+
+  <!-- CHECKOUT CONTENT -->
+  <main class="checkout-container">
+    <div class="checkout-header">
+      <h1>Rezervasyon Detayları</h1>
+      <p>Unutmayın 🤩 Ekibimiz sizi almaya geldiğinde ödeme yapacaksınız.</p>
+    </div>
+
+    <div class="checkout-grid">
+      <!-- LEFT: FORM -->
+      <div class="checkout-form-panel">
+        <h3>Fatura ve Kişisel Detaylar</h3>
+        <form id="checkoutForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Adınız *</label>
+              <input type="text" id="chkFirstName" required placeholder="Adınız">
+            </div>
+            <div class="form-group">
+              <label>Soyadınız *</label>
+              <input type="text" id="chkLastName" required placeholder="Soyadınız">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label>Telefon Numarası *</label>
+            <div class="phone-input-wrap">
+              <select id="chkPhoneCode" class="phone-prefix" style="border:none; background:transparent; padding-right:8px; cursor:pointer; outline:none; max-width: 140px;">
+                <option value="+90">🇹🇷 +90 (TR)</option>
+                <option value="+7">🇷🇺 +7 (RU)</option>
+                <option value="+49">🇩🇪 +49 (DE)</option>
+                <option value="+44">🇬🇧 +44 (GB)</option>
+                <option value="+1">🇺🇸 +1 (US)</option>
+                <option value="+33">🇫🇷 +33 (FR)</option>
+                <option value="+31">🇳🇱 +31 (NL)</option>
+                <option value="+46">🇸🇪 +46 (SE)</option>
+                <option value="+47">🇳🇴 +47 (NO)</option>
+                <option value="+48">🇵🇱 +48 (PL)</option>
+                <option value="other">🌐 Diğer</option>
+              </select>
+              <input type="tel" id="chkPhone" required placeholder="555 123 45 67" style="flex:1;">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label>E-posta Adresi (İsteğe Bağlı)</label>
+            <input type="email" id="chkEmail" placeholder="ornek@mail.com">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Otel Adı / Alınış Adresi *</label>
+              <input type="text" id="chkHotel" required placeholder="Sizi nereden alacağız?">
+            </div>
+            <div class="form-group">
+              <label>Oda Numarası</label>
+              <input type="text" id="chkRoom" placeholder="Varsa oda numaranız">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Ek Bilgi / Sipariş Notları (İsteğe Bağlı)</label>
+            <textarea id="chkNotes" rows="4" placeholder="Tur ile ilgili özel istekleriniz veya notlarınız..."></textarea>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: SUMMARY & BUTTONS -->
+      <div class="checkout-sidebar">
+        <h3>Siparişiniz</h3>
+        <table class="order-summary-table">
+          <thead>
+            <tr>
+              <th>ÜRÜN</th>
+              <th class="right">TUTAR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="order-item-title" id="sumTourName">Alanya Tekne Turu</span>
+                <span class="order-item-meta" id="sumDate">Tarih: 18 Haziran 2026</span>
+                <span class="order-item-meta" id="sumPax">Kişi: 1 Yetişkin, 0 Çocuk</span>
+              </td>
+              <td class="right" id="sumSubtotal">810.00 ₺</td>
+            </tr>
+            <tr class="order-total-row">
+              <td>Genel Toplam</td>
+              <td class="right" id="sumTotal">810.00 ₺</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="payment-notice">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Ödemenizi tura katılmak üzere araca bindiğinizde rehberimize nakit olarak yapabilirsiniz. Ön ödeme gerekmez.</span>
+        </div>
+
+        <p style="font-size: 13px; color: var(--text-mid); margin-bottom: 16px; text-align: center;">
+          Rezervasyonunuzu oluşturmak için aşağıdaki kanallardan birini seçin:
+        </p>
+
+        <div class="action-buttons">
+          <button type="button" class="btn-action btn-wa" id="btnSubmitWA">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp ile İlet
+          </button>
+          <button type="button" class="btn-action btn-tg" id="btnSubmitTG">
+            <i class="fa-brands fa-telegram"></i> Telegram ile İlet
+          </button>
+          </div>
+        <p style="font-size: 11px; color: #94a3b8; text-align: center; margin-top: 16px;">
+          Kişisel verileriniz rezervasyonunuzu işlemek için kullanılacaktır.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Load Data from LocalStorage
+    const storedData = localStorage.getItem('demaBooking');
+    let bData = {
+      tourName: 'Bilinmeyen Tur',
+      date: 'Bilinmeyen Tarih',
+      adults: 0,
+      child7: 0,
+      child0: 0,
+      totalPrice: '0 ₺'
+    };
+    
+    if(storedData) {
+      bData = JSON.parse(storedData);
+      document.getElementById('sumTourName').innerText = bData.tourName;
+      document.getElementById('sumDate').innerText = 'Tarih: ' + bData.date;
+      
+      let paxStr = bData.adults + ' Yetişkin';
+      if(bData.child7 > 0) paxStr += ', ' + bData.child7 + ' Çocuk (7-11)';
+      if(bData.child0 > 0) paxStr += ', ' + bData.child0 + ' Çocuk (0-6)';
+      document.getElementById('sumPax').innerText = 'Kişi: ' + paxStr;
+      
+      document.getElementById('sumSubtotal').innerText = bData.totalPrice;
+      document.getElementById('sumTotal').innerText = bData.totalPrice;
+    }
+
+    // Submission Logic
+    function getMessageContent() {
+      const form = document.getElementById('checkoutForm');
+      if(!form.checkValidity()) {
+        form.reportValidity();
+        return null;
+      }
+      
+      const fn = document.getElementById('chkFirstName').value;
+      const ln = document.getElementById('chkLastName').value;
+      const phoneCode = document.getElementById('chkPhoneCode').value;
+      const rawPhone = document.getElementById('chkPhone').value;
+      const phone = phoneCode === 'other' ? rawPhone : phoneCode + ' ' + rawPhone;
+      const email = document.getElementById('chkEmail').value;
+      const hotel = document.getElementById('chkHotel').value;
+      const room = document.getElementById('chkRoom').value;
+      const notes = document.getElementById('chkNotes').value;
+
+      let msg = `*YENİ REZERVASYON TALEBİ*\n`;
+      msg += `--------------------------\n`;
+      msg += `*Tur:* ${bData.tourName}\n`;
+      msg += `*Tarih:* ${bData.date}\n`;
+      msg += `*Kişi Sayısı:* ${bData.adults} Yetişkin`;
+      if(bData.child7>0) msg += `, ${bData.child7} Çocuk (7-11)`;
+      if(bData.child0>0) msg += `, ${bData.child0} Bebek (0-6)`;
+      msg += `\n*Toplam Tutar:* ${bData.totalPrice}\n\n`;
+      
+      msg += `*MÜŞTERİ BİLGİLERİ*\n`;
+      msg += `*Ad Soyad:* ${fn} ${ln}\n`;
+      msg += `*Telefon:* ${phone}\n`;
+      msg += `*Otel / Adres:* ${hotel}\n`;
+      if(room) msg += `*Oda No:* ${room}\n`;
+      if(notes) msg += `*Notlar:* ${notes}\n`;
+      
+      return encodeURIComponent(msg);
+    }
+
+    document.getElementById('btnSubmitWA').addEventListener('click', () => {
+      const text = getMessageContent();
+      if(text) window.open(`https://wa.me/905364800345?text=${text}`, '_blank');
+    });
+
+    document.getElementById('btnSubmitTG').addEventListener('click', () => {
+      const text = getMessageContent();
+      if(text) window.open(`https://t.me/dematours?text=${text}`, '_blank');
+    });
+
+    document.getElementById('btnSubmitSys').addEventListener('click', () => {
+      const text = getMessageContent();
+      if(text) {
+        alert('Rezervasyon talebiniz sistemimize başarıyla ulaştı! Ekibimiz sizinle en kısa sürede iletişime geçecektir.');
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+
+<!-- Google Translate -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'tr', includedLanguages: 'en,tr,ru', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

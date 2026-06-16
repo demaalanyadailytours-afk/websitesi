@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tüm Turlar - Dema Tours</title>
+<meta content="Alanya'nın en güzel turlarını keşfedin." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+    .page-banner {
+      position: relative;
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      padding: 160px 32px 100px;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,20,40,0.85) 0%, rgba(30,107,184,0.6) 100%);
+      z-index: 1;
+    }
+    .page-banner-title, .page-banner-desc {
+      position: relative;
+      z-index: 2;
+    }
+    .page-banner-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .page-banner-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .all-tours-section {
+      padding: 80px 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+      min-height: 50vh;
+    }
+  </style>
+</head>
+<body style="background: #f7f9fc;">
+<!-- TOP INFO BAR -->
+<div class="topbar">
+<div class="topbar-inner">
+<div class="topbar-left">
+<span class="topbar-item">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <a href="https://maps.app.goo.gl/gWSrLL4P85QzDbNf7" target="_blank" style="color:inherit; text-decoration:none;">Antalya / Alanya</a>
+        </span>
+<span class="topbar-divider">|</span>
+<span class="topbar-item">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.73a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          0551 433 60 45
+        </span>
+<span class="topbar-divider">|</span>
+<a class="topbar-item topbar-link" href="#">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+</div>
+<div class="topbar-right">
+<div class="lang-switcher">
+<button class="lang-btn active">TR</button>
+<button class="lang-btn">EN</button>
+<button class="lang-btn">RU</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN NAVIGATION -->
+<header class="navbar" id="navbar" style="background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+<div class="navbar-inner">
+<div class="logo-group">
+<a class="logo-link" href="index.html">
+<img alt="Dema Tours Logo" class="logo-img" src="LOGO.png"/>
+</a>
+<div class="logo-badge">
+<span class="badge-name">HAVAİ CİNDERELLA</span>
+<span class="badge-doc">BELGE NO: 17770</span>
+</div>
+</div>
+<nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+<a class="nav-link active" href="tours.html">Turlar</a>
+<a class="nav-link" href="index.html#activitiesSection">Aktiviteler</a>
+<a class="nav-link" href="blog.html">Blog</a>
+        <a href="iletisim.html" class="nav-link">İletişim</a>
+</nav>
+<div class="nav-actions">
+<button aria-label="Menü" class="hamburger" id="hamburger">
+<span style="background:var(--navy)"></span><span style="background:var(--navy)"></span><span style="background:var(--navy)"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- PAGE BANNER -->
+
+    <div class="page-banner blog-banner">
+      <div class="page-banner-content">
+        <h1 class="page-banner-title">Blog - Seyahat Rehberi</h1>
+        <p>Alanya, Side ve Belek hakkında en güncel bilgiler, seyahat rehberleri ve macera hikayeleri.</p>
+      </div>
+    </div>
+    
+    <section class="blog-section" id="blogSection">
+    <div class="blog-header">
+      <div class="blog-header-left">
+        <span class="blog-tag">📝 Blog</span>
+        <h2 class="blog-post-title">Son Yazılar</h2>
+        <p class="blog-subtitle">Alanya ve Türkiye hakkında en güncel bilgiler, seyahat rehberleri ve macera hikayeleri</p>
+      </div>
+      <div class="blog-header-right">
+        <a href="#" class="btn-blog-all">Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+
+    <div class="blog-grid">
+
+        <!-- SEO Card 1 -->
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <span class="blog-category">Popüler</span>
+            <img src="hero-bg.jpg" alt="Alanya Günlük Tur" class="blog-img" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-date"><i class="fa-regular fa-calendar"></i> 10 Haziran 2026</div>
+            <h3 class="blog-post-title">Alanya Günlük Tur Tavsiyeleri 2026</h3>
+            <p class="blog-post-excerpt">Alanya'da tatilinizde en iyi günlük tur seçeneklerini nasıl değerlendirmelisiniz? 2026 yılı için en çok tercih edilen turları sizler için derledik.</p>
+            <a href="blog-gunluk-turlar.html" class="blog-read-more">Devamını Oku 
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- SEO Card 2 -->
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <span class="blog-category">Rehber</span>
+            <img src="LOGO.png" alt="Aile Turları" class="blog-img" style="object-fit: contain; background: #f8f9fa;" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-date"><i class="fa-regular fa-calendar"></i> 12 Haziran 2026</div>
+            <h3 class="blog-post-title">Alanya'da Çocuklarla Yapılabilecek Aile Turları</h3>
+            <p class="blog-post-excerpt">Çocuklarınızla birlikte sorunsuz ve eğlenceli bir tatil geçirmek istiyorsanız, en güvenli ve keyifli aile aktiviteleri rehberimiz yayında.</p>
+            <a href="blog-aile-turlari.html" class="blog-read-more">Devamını Oku 
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- SEO Card 3 -->
+        <article class="blog-card">
+          <div class="blog-img-wrap">
+            <span class="blog-category">Huzur</span>
+            <img src="hero-bg.jpg" alt="Sakin Aktiviteler" class="blog-img" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-date"><i class="fa-regular fa-calendar"></i> 15 Haziran 2026</div>
+            <h3 class="blog-post-title">Kalabalıktan Uzak: Alanya'da Sakin Aktiviteler</h3>
+            <p class="blog-post-excerpt">Tatilinizde karmaşadan uzaklaşmak mı istiyorsunuz? Alanya'nın az bilinen, sakin ve huzurlu köşelerini keşfetmek için tıklayın.</p>
+            <a href="blog-sakin-aktiviteler.html" class="blog-read-more">Devamını Oku 
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      
+      <!-- Blog 1 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <span class="blog-category">Aktiviteler</span>
+          <img src="blog_activities.png" alt="Alanya Aktiviteleri" class="blog-img" />
+        </div>
+        <div class="blog-body">
+          <div class="blog-date"><i class="fa-regular fa-calendar"></i> 28 Nisan 2026</div>
+          <h3 class="blog-post-title"><a href="blog-1.html">Alanya'da Neler Yapılır? En Harika 10 Aktivite (2026)</a></h3>
+          <p class="blog-post-excerpt">2026 yılı Alanya tatilinizde denemeniz gereken eğlence, tarih ve doğa dolu en iyi 10 etkinlik.</p>
+          <a href="blog-1.html" class="blog-read-more">Devamını Oku <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Blog 2 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <span class="blog-category">Tekne Turları</span>
+          <img src="blog_boat.png" alt="Alanya Tekne Turu" class="blog-img" />
+        </div>
+        <div class="blog-body">
+          <div class="blog-date"><i class="fa-regular fa-calendar"></i> 1 Mayıs 2026</div>
+          <h3 class="blog-post-title"><a href="blog-1.html">Alanya Tekne Turu: Akdeniz'in Mavi Sularında Eşsiz Bir Gün</a></h3>
+          <p class="blog-post-excerpt">Alanya tatilinizi unutulmaz kılacak, doğa, eğlence ve deniz dolu en keyifli mavi yolculuk deneyimi.</p>
+          <a href="blog-1.html" class="blog-read-more">Devamını Oku <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Blog 3 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <span class="blog-category">Macera</span>
+          <img src="blog_jeep.png" alt="Alanya Jeep Safari" class="blog-img" />
+        </div>
+        <div class="blog-body">
+          <div class="blog-date"><i class="fa-regular fa-calendar"></i> 3 Mayıs 2026</div>
+          <h3 class="blog-post-title"><a href="blog-1.html">Alanya Jeep Safari: Toros Dağları'nda Tozlu ve Eğlenceli Bir Macera</a></h3>
+          <p class="blog-post-excerpt">Toros Dağları'nın eteklerinden masmavi koylara, şelalelerden ormanlara aksiyon dolu doğa yolculuğu...</p>
+          <a href="blog-1.html" class="blog-read-more">Devamını Oku <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Blog 4 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <span class="blog-category">Doğa</span>
+          <img src="blog_sapadere.png" alt="Sapadere Kanyonu" class="blog-img" />
+        </div>
+        <div class="blog-body">
+          <div class="blog-date"><i class="fa-regular fa-calendar"></i> 5 Mayıs 2026</div>
+          <h3 class="blog-post-title"><a href="blog-1.html">Sapadere Kanyonu Rehberi: Alanya'nın Gizli Doğa Harikası</a></h3>
+          <p class="blog-post-excerpt">Buz gibi suları, ahşap yürüyüş yolları ve görkemli şelalesiyle Sapadere Kanyonu'nu keşfetmeye hazırlanın.</p>
+          <a href="blog-1.html" class="blog-read-more">Devamını Oku <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Blog 5 -->
+      <article class="blog-card">
+        <a href="blog-1.html" class="blog-card-img" style="display: block;">
+          <img src="blog_dim.png" alt="Dim Çayı" />
+          <span class="blog-category">Doğa</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-date"><i class="fa-regular fa-calendar"></i> 8 Mayıs 2026</div>
+          <h3 class="blog-post-title"><a href="blog-1.html">Dim Çayı'nda Serin Bir Gün: Yemek, Yüzme ve Doğa</a></h3>
+          <p class="blog-post-excerpt">Alanya'nın yaz sıcağından kaçıp su üzerinde yemek yiyebileceğiniz ve serinleyeceğiniz harika bir kaçış noktası.</p>
+          <a href="blog-1.html" class="blog-read-more">Devamını Oku <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Blog 6 -->
+      <article class="blog-card">
+        <div class="blog-img-wrap">
+          <span class="blog-category">Kültür</span>
+          <img src="cappadocia.png" alt="Kapadokya Turu" class="blog-img" />
+        </div>
+        <div class="blog-body">
+          <div class="blog-date"><i class="fa-regular fa-calendar"></i> 12 Mayıs 2026</div>
+          <h3 class="blog-post-title"><a href="blog-1.html">Kapadokya Turu (Alanya Çıkışlı): Peri Bacaları Macerası</a></h3>
+          <p class="blog-post-excerpt">Sıcak hava balonları, yer altı şehirleri ve eşsiz peri bacaları ile Alanya'dan Kapadokya'ya rüya gibi bir yolculuk.</p>
+          <a href="blog-1.html" class="blog-read-more">Devamını Oku <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+    
+<!-- FOOTER -->
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo-group footer-logo-group">
+<a class="logo-link" href="index.html">
+<img alt="Dema Tours Logo" class="footer-logo" src="LOGO.png"/>
+</a>
+<div class="logo-badge">
+<span class="badge-name">HAVAİ CİNDERELLA</span>
+<span class="badge-doc">BELGE NO: 17770</span>
+</div>
+</div>
+<p class="footer-desc">Alanya'nın en seçkin günlük turları ve macera aktiviteleri ile tatilinize unutulmaz anılar katın.</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Dema Turizm. Tüm hakları saklıdır. Belge No: 17770 (Havai Cinderella)</p>
+</div>
+</div>
+</footer>
+<script src="main.js"></script>
+
+<!-- Google Translate -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'tr', includedLanguages: 'en,tr,ru', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
