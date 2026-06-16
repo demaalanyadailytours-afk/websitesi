@@ -25,12 +25,7 @@ navMenu.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-/* ── Language switcher ──────────────────────────────────────── */
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  });
+
 });
 
 /* ── Favourite (heart) toggle ───────────────────────────────── */
@@ -317,7 +312,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Google Translate Language Switcher ---
-  // Function to set cookie
   function setCookie(key, value, expiry) {
     var expires = new Date();
     expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
@@ -328,40 +322,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function deleteCookie(key) {
     var domain = window.location.hostname.replace('www.', '');
-    document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+    document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;domain=.' + domain;
   }
 
-  const langBtns = document.querySelectorAll('.lang-btn');
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const text = this.textContent.trim();
-      const lang = text === 'EN' ? 'en' : (text === 'RU' ? 'ru' : 'tr');
-      
-      if (lang === 'en') {
-          setCookie('googtrans', '/tr/en', 30);
-      } else if (lang === 'ru') {
-          setCookie('googtrans', '/tr/ru', 30);
-      } else {
-          deleteCookie('googtrans');
-      }
-      
-      window.location.reload();
-    });
-  });
-  
-  // Set initial active state based on cookie
-  const isEn = document.cookie.includes('googtrans=/tr/en');
-  const isRu = document.cookie.includes('googtrans=/tr/ru');
-  document.querySelectorAll('.lang-btn').forEach(b => {
-     const text = b.textContent.trim();
-     if(isEn && text === 'EN') b.classList.add('active');
-     else if(isRu && text === 'RU') b.classList.add('active');
-     else if(!isEn && !isRu && text === 'TR') b.classList.add('active');
-     else b.classList.remove('active');
-  });
+  const langDropdownBtn = document.getElementById('langDropdownBtn');
+  const langDropdownContent = document.getElementById('langDropdownContent');
+  const currentLangText = document.getElementById('currentLangText');
 
+  if (langDropdownBtn && langDropdownContent) {
+    langDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langDropdownContent.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.lang-dropdown')) {
+        langDropdownContent.classList.remove('show');
+      }
+    });
+
+    const langOptions = langDropdownContent.querySelectorAll('a[data-lang]');
+    langOptions.forEach(opt => {
+      opt.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        
+        if (lang === 'tr') {
+          deleteCookie('googtrans');
+          setCookie('googtrans', '/tr/tr', -1);
+          window.location.reload();
+        } else {
+          setCookie('googtrans', '/tr/' + lang, 30);
+          window.location.reload();
+        }
+      });
+    });
+
+    // Set initial text based on cookie
+    const match = document.cookie.match(/googtrans=\/tr\/([a-z]{2})/);
+    if (match && match[1] && currentLangText) {
+      const code = match[1].toUpperCase();
+      currentLangText.textContent = code === 'TR' ? 'TR' : code;
+    }
+  }
+  
   // --- Dropdown Logic ---
   const activityDropBtn = document.getElementById('activityDropBtn');
   const activityDropContent = document.getElementById('activityDropContent');

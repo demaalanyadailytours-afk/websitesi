@@ -32,10 +32,22 @@
         </a>
       </div>
       <div class="topbar-right">
-        <div class="lang-switcher notranslate" translate="no">
-          <button class="lang-btn active">TR</button>
-          <button class="lang-btn">EN</button>
-<button class="lang-btn">RU</button>
+        <div class="lang-dropdown notranslate" translate="no" id="langDropdown">
+          <button class="lang-dropdown-btn" id="langDropdownBtn">
+            <i class="fa-solid fa-globe"></i> <span id="currentLangText">TR</span> <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i>
+          </button>
+          <div class="lang-dropdown-content" id="langDropdownContent">
+            <a href="#" data-lang="tr">TR - Trke</a>
+            <a href="#" data-lang="en">EN - English</a>
+            <a href="#" data-lang="ru">RU - P</a>
+            <a href="#" data-lang="pl">PL - Polski</a>
+            <a href="#" data-lang="et">ET - Eesti</a>
+            <a href="#" data-lang="hu">HU - Magyar</a>
+            <a href="#" data-lang="sk">SK - Slovenina</a>
+            <a href="#" data-lang="lt">LT - Lietuvi</a>
+            <a href="#" data-lang="de">DE - Deutsch</a>
+            <a href="#" data-lang="fr">FR - Franais</a>
+          </div>
         </div>
       </div>
     </div>
@@ -266,7 +278,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-bottom" style="border:none; padding-top:0;">
-        <p>&copy; 2026 Dema Turizm. Tüm hakları saklıdır. Belge No: 17770 (Havai Cinderella)</p>
+        <p>&copy; 2026 Dema Turizm. Tüm hakları saklıdır. TRSAB No: 17770 (Havai Cinderella)</p>
       </div>
     </div>
   </footer>
@@ -277,7 +289,7 @@
 <div id="google_translate_element"></div>
 <script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'tr', includedLanguages: 'en,tr,ru', autoDisplay: false}, 'google_translate_element');
+  new google.translate.TranslateElement({pageLanguage: 'tr', includedLanguages: 'en,tr,ru,pl,et,hu,sk,lt,de,fr', autoDisplay: false}, 'google_translate_element');
 }
 </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

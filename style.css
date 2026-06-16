@@ -91,35 +91,13 @@ a  { text-decoration: none; color: inherit; }
 }
 
 /* ─── LANGUAGE SWITCHER ─────────────────────────────────────── */
-.lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 6px;
-  padding: 3px;
-}
 
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: rgba(255,255,255,0.6);
-  font-family: 'Inter', sans-serif;
-  font-size: 11.5px;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s;
-  letter-spacing: 0.04em;
-}
 
-.lang-btn:hover { color: var(--white); }
 
-.lang-btn.active {
-  background: var(--blue);
-  color: var(--white);
-}
+
+
+
+
 
 /* ─── NAVBAR ────────────────────────────────────────────────── */
 .navbar {
@@ -1804,8 +1782,8 @@ body { top: 0px !important; }
   .topbar-inner { padding: 0 10px !important; justify-content: space-between; }
   .topbar-left { gap: 5px !important; font-size: 11px !important; flex-wrap: nowrap; white-space: nowrap; }
   .topbar-item { gap: 3px !important; }
-  .lang-switcher { gap: 2px !important; }
-  .lang-btn { padding: 3px 6px !important; font-size: 10px !important; }
+  
+  
 }
 
 
@@ -2043,4 +2021,60 @@ html, body {
     grid-template-columns: repeat(7, 1fr) !important;
     width: 100% !important;
   }
+}
+
+/* LANGUAGE DROPDOWN */
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.lang-dropdown-btn {
+  background: rgba(10,37,88,0.05);
+  color: var(--navy);
+  border: 1px solid rgba(10,37,88,0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.lang-dropdown-btn:hover {
+  background: rgba(10,37,88,0.1);
+}
+.lang-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 140px;
+  box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 9999;
+  overflow: hidden;
+  margin-top: 5px;
+  border: 1px solid rgba(10,37,88,0.1);
+}
+.lang-dropdown-content a {
+  color: var(--navy);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+  border-bottom: 1px solid rgba(10,37,88,0.05);
+}
+.lang-dropdown-content a:last-child {
+  border-bottom: none;
+}
+.lang-dropdown-content a:hover {
+  background-color: rgba(10,37,88,0.05);
+  padding-left: 20px;
+}
+.lang-dropdown-content.show {
+  display: block;
 }
