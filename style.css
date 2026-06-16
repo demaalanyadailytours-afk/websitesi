@@ -79,14 +79,14 @@ a  { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   gap: 5px;
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.95);
   transition: color 0.2s;
 }
 
 .topbar-link:hover { color: #000000; }
 
 .topbar-divider {
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.4);
   font-size: 14px;
 }
 
@@ -2029,9 +2029,9 @@ html, body {
   display: inline-block;
 }
 .lang-dropdown-btn {
-  background: rgba(10,37,88,0.05);
-  color: var(--navy);
-  border: 1px solid rgba(10,37,88,0.1);
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+  border:  1px solid rgba(255,255,255,0.2);
   padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -2043,7 +2043,7 @@ html, body {
   transition: all 0.2s;
 }
 .lang-dropdown-btn:hover {
-  background: rgba(10,37,88,0.1);
+  background: rgba(255,255,255,0.2);
 }
 .lang-dropdown-content {
   display: none;
