@@ -313,7 +313,7 @@ a  { text-decoration: none; color: inherit; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.3);
+  background: transparent;
 }
 
 .hero-content {
@@ -1968,4 +1968,8 @@ html, body {
     bottom: 20px;
     right: 20px;
   }
+}
+
+.hero-title, .hero-subtitle, .page-banner-title, .page-banner-desc {
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5);
 }
