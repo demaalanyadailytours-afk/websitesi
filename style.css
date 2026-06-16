@@ -1800,3 +1800,13 @@ body { top: 0px !important; }
   .promo-title { font-size: 28px; }
   .promo-action { width: 100%; text-align: center; }
 }
+
+
+/* Topbar Mobile Fixes */
+@media (max-width: 480px) {
+  .topbar-inner { padding: 0 10px !important; justify-content: space-between; }
+  .topbar-left { gap: 5px !important; font-size: 11px !important; flex-wrap: nowrap; white-space: nowrap; }
+  .topbar-item { gap: 3px !important; }
+  .lang-switcher { gap: 2px !important; }
+  .lang-btn { padding: 3px 6px !important; font-size: 10px !important; }
+}
