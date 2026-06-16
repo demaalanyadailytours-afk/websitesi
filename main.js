@@ -280,50 +280,41 @@ function updatePageInfo(filterValue) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // --- WhatsApp Widget Logic ---
-  const wpHTML = `
-    <div class="wp-widget">
-      <div class="wp-bubble" id="wpBubble">
-        <div class="wp-bubble-header">
-          <span>WhatsApp Destek</span>
-          <span class="wp-bubble-close" id="wpClose">&times;</span>
+    // --- Multi-Contact Widget Logic ---
+  const contactHTML = `
+    <div class="contact-widget">
+      <div class="contact-bubble" id="contactBubble">
+        <div class="contact-bubble-header">
+          <span>Bize Ulaşın</span>
+          <span class="contact-bubble-close" id="contactClose">&times;</span>
         </div>
-        <div class="wp-bubble-body">
-          Merhaba! Size nasıl yardımcı olabilirim?
+        <div class="contact-bubble-body">
+          <a href="https://wa.me/905514336045" target="_blank" class="contact-item" style="background:#25d366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://t.me/+905514336045" target="_blank" class="contact-item" style="background:#0088cc;"><i class="fa-brands fa-telegram"></i> Telegram</a>
+          <a href="viber://chat?number=%2B905514336045" target="_blank" class="contact-item" style="background:#7360f2;"><i class="fa-brands fa-viber"></i> Viber</a>
+          <a href="mailto:demaalanyadailytours@gmail.com" target="_blank" class="contact-item" style="background:#ea4335;"><i class="fa-solid fa-envelope"></i> E-Posta</a>
         </div>
-        <a href="https://wa.me/905514336045" target="_blank" class="wp-btn">Sohbet Et</a>
       </div>
-      <div class="wp-icon" id="wpIcon">
-        <i class="fa-brands fa-whatsapp"></i>
+      <div class="contact-icon" id="contactIcon">
+        <i class="fa-solid fa-comment-dots"></i>
       </div>
     </div>
   `;
-  document.body.insertAdjacentHTML('beforeend', wpHTML);
+  document.body.insertAdjacentHTML('beforeend', contactHTML);
 
-  const wpBubble = document.getElementById('wpBubble');
-  const wpIcon = document.getElementById('wpIcon');
-  const wpClose = document.getElementById('wpClose');
+  const contactBubble = document.getElementById('contactBubble');
+  const contactIcon = document.getElementById('contactIcon');
+  const contactClose = document.getElementById('contactClose');
 
-  if(wpBubble && wpIcon && wpClose) {
-      setTimeout(() => {
-        if(window.innerWidth > 768) {
-          wpBubble.classList.add('show');
-        }
-      }, 2000);
-
-      wpIcon.addEventListener('click', () => {
-        if(window.innerWidth <= 768) {
-          window.open('https://wa.me/905514336045', '_blank');
-        } else {
-          wpBubble.classList.toggle('show');
-        }
+  if(contactBubble && contactIcon && contactClose) {
+      contactIcon.addEventListener('click', () => {
+        contactBubble.classList.toggle('show');
       });
 
-      wpClose.addEventListener('click', () => {
-        wpBubble.classList.remove('show');
+      contactClose.addEventListener('click', () => {
+        contactBubble.classList.remove('show');
       });
   }
-
 
   // --- Google Translate Language Switcher ---
   // Function to set cookie

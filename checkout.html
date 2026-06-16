@@ -184,14 +184,20 @@
           Rezervasyonunuzu oluşturmak için aşağıdaki kanallardan birini seçin:
         </p>
 
-        <div class="action-buttons">
-          <button type="button" class="btn-action btn-wa" id="btnSubmitWA">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp ile İlet
+        <div class="action-buttons" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <button type="button" class="btn-action btn-wa" id="btnSubmitWA" style="margin-bottom:0;">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
           </button>
-          <button type="button" class="btn-action btn-tg" id="btnSubmitTG">
-            <i class="fa-brands fa-telegram"></i> Telegram ile İlet
+          <button type="button" class="btn-action btn-tg" id="btnSubmitTG" style="margin-bottom:0;">
+            <i class="fa-brands fa-telegram"></i> Telegram
           </button>
-          </div>
+          <button type="button" class="btn-action btn-viber" id="btnSubmitVB" style="margin-bottom:0; background-color: #7360f2; color: #fff; border:none; border-radius: 8px; padding: 14px; font-weight:600; cursor:pointer;">
+            <i class="fa-brands fa-viber"></i> Viber
+          </button>
+          <button type="button" class="btn-action btn-mail" id="btnSubmitMail" style="margin-bottom:0; background-color: #ea4335; color: #fff; border:none; border-radius: 8px; padding: 14px; font-weight:600; cursor:pointer;">
+            <i class="fa-solid fa-envelope"></i> E-Posta
+          </button>
+        </div>
         <p style="font-size: 11px; color: #94a3b8; text-align: center; margin-top: 16px;">
           Kişisel verileriniz rezervasyonunuzu işlemek için kullanılacaktır.
         </p>
@@ -264,12 +270,12 @@
 
     document.getElementById('btnSubmitWA').addEventListener('click', () => {
       const text = getMessageContent();
-      if(text) window.open(`https://wa.me/905364800345?text=${text}`, '_blank');
+      if(text) window.open(`https://wa.me/905514336045?text=${text}`, '_blank');
     });
 
     document.getElementById('btnSubmitTG').addEventListener('click', () => {
       const text = getMessageContent();
-      if(text) window.open(`https://t.me/dematours?text=${text}`, '_blank');
+      if(text) window.open(`https://t.me/+905514336045?text=${text}`, '_blank');
     });
 
     document.getElementById('btnSubmitSys').addEventListener('click', () => {
