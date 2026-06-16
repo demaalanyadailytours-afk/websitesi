@@ -1821,3 +1821,11 @@ body { top: 0px !important; position: relative !important; }
 .VIpgJd-ZVi9od-aZ2wEe-wOHMyf { display: none !important; }
 #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
 .goog-text-highlight { background: none !important; box-shadow: none !important; }
+
+
+/* HIDE HORIZONTAL SCROLL ON MOBILE */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  width: 100%;
+}
