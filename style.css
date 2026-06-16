@@ -1810,3 +1810,14 @@ body { top: 0px !important; }
   .lang-switcher { gap: 2px !important; }
   .lang-btn { padding: 3px 6px !important; font-size: 10px !important; }
 }
+
+
+/* HIDE GOOGLE TRANSLATE BANNER AGGRESSIVELY */
+iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
+.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; position: relative !important; }
+.VIpgJd-ZVi9od-ORHb-OEVmcd { display: none !important; }
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf { display: none !important; }
+#goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+.goog-text-highlight { background: none !important; box-shadow: none !important; }
