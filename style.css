@@ -373,7 +373,7 @@ a  { text-decoration: none; color: inherit; }
 }
 
 .hero-title-accent {
-  color: #000000;
+  color: var(--gold);
   display: inline-block;
 }
 
@@ -382,7 +382,7 @@ a  { text-decoration: none; color: inherit; }
   font-weight: 500;
   font-weight: 400;
   line-height: 1.65;
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 36px;
 }
 
