@@ -350,8 +350,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const lang = opt.getAttribute('data-lang');
       clearGoogtransCookies();
-      if (lang !== 'tr') {
+      
+      let url = window.location.pathname + window.location.search;
+      if (lang === 'tr') {
+        window.location.href = url;
+      } else {
         setCookie('googtrans', '/tr/' + lang, 30);
+        window.location.href = url + '#googtrans(tr|' + lang + ')';
       }
       window.location.reload();
     }
