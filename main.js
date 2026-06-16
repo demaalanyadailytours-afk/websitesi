@@ -311,6 +311,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Google Translate Language Switcher ---
+  function clearGoogtransCookies() {
+    const domains = [
+      window.location.hostname,
+      '.' + window.location.hostname,
+      window.location.hostname.replace('www.', ''),
+      '.' + window.location.hostname.replace('www.', '')
+    ];
+    domains.forEach(d => {
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${d}`;
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+    });
+  }
+
   function setCookie(key, value, expiry) {
     var expires = new Date();
     expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
@@ -319,53 +332,39 @@ document.addEventListener('DOMContentLoaded', () => {
     document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/;domain=.' + domain;
   }
 
-  function deleteCookie(key) {
-    var domain = window.location.hostname.replace('www.', '');
-    document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;domain=.' + domain;
-  }
-
-  const langDropdownBtn = document.getElementById('langDropdownBtn');
-  const langDropdownContent = document.getElementById('langDropdownContent');
-  const currentLangText = document.getElementById('currentLangText');
-
-  if (langDropdownBtn && langDropdownContent) {
-    langDropdownBtn.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
+    // Dropdown toggle
+    const btn = e.target.closest('#langDropdownBtn');
+    if (btn) {
       e.stopPropagation();
-      langDropdownContent.classList.toggle('show');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.lang-dropdown')) {
-        langDropdownContent.classList.remove('show');
-      }
-    });
-
-    const langOptions = langDropdownContent.querySelectorAll('a[data-lang]');
-    langOptions.forEach(opt => {
-      opt.addEventListener('click', function(e) {
-        e.preventDefault();
-        const lang = this.getAttribute('data-lang');
-        
-        if (lang === 'tr') {
-          deleteCookie('googtrans');
-          setCookie('googtrans', '/tr/tr', -1);
-          window.location.reload();
-        } else {
-          setCookie('googtrans', '/tr/' + lang, 30);
-          window.location.reload();
-        }
-      });
-    });
-
-    // Set initial text based on cookie
-    const match = document.cookie.match(/googtrans=\/tr\/([a-z]{2})/);
-    if (match && match[1] && currentLangText) {
-      const code = match[1].toUpperCase();
-      currentLangText.textContent = code === 'TR' ? 'TR' : code;
+      const content = document.getElementById('langDropdownContent');
+      if(content) content.classList.toggle('show');
+    } else if (!e.target.closest('.lang-dropdown')) {
+      const content = document.getElementById('langDropdownContent');
+      if(content) content.classList.remove('show');
     }
+
+    // Language select
+    const opt = e.target.closest('a[data-lang]');
+    if (opt) {
+      e.preventDefault();
+      const lang = opt.getAttribute('data-lang');
+      clearGoogtransCookies();
+      if (lang !== 'tr') {
+        setCookie('googtrans', '/tr/' + lang, 30);
+      }
+      window.location.reload();
+    }
+  });
+
+  // Set initial text based on cookie
+  const match = document.cookie.match(/googtrans=\/tr\/([a-z]{2})/);
+  const currentLangText = document.getElementById('currentLangText');
+  if (match && match[1] && currentLangText) {
+    const code = match[1].toUpperCase();
+    currentLangText.textContent = code === 'TR' ? 'TR' : code;
   }
-  
+
   // --- Dropdown Logic ---
   const activityDropBtn = document.getElementById('activityDropBtn');
   const activityDropContent = document.getElementById('activityDropContent');
