@@ -306,11 +306,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if(wpBubble && wpIcon && wpClose) {
       setTimeout(() => {
-        wpBubble.classList.add('show');
+        if(window.innerWidth > 768) {
+          wpBubble.classList.add('show');
+        }
       }, 2000);
 
       wpIcon.addEventListener('click', () => {
-        wpBubble.classList.toggle('show');
+        if(window.innerWidth <= 768) {
+          window.open('https://wa.me/905514336045', '_blank');
+        } else {
+          wpBubble.classList.toggle('show');
+        }
       });
 
       wpClose.addEventListener('click', () => {

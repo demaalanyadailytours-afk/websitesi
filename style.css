@@ -1829,3 +1829,11 @@ html, body {
   overflow-x: hidden !important;
   width: 100%;
 }
+
+
+/* HIDE WP BUBBLE ON MOBILE */
+@media (max-width: 768px) {
+  .wp-bubble, .wp-bubble.show {
+    display: none !important;
+  }
+}
