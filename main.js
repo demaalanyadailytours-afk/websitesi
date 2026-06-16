@@ -324,7 +324,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function setCookie(key, value, expiry) {
     var expires = new Date();
     expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+    var domain = window.location.hostname.replace('www.', '');
     document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/;domain=.' + domain;
+  }
+
+  function deleteCookie(key) {
+    var domain = window.location.hostname.replace('www.', '');
+    document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+    document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;domain=.' + domain;
   }
 
   const langBtns = document.querySelectorAll('.lang-btn');
@@ -334,18 +342,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const text = this.textContent.trim();
       const lang = text === 'EN' ? 'en' : (text === 'RU' ? 'ru' : 'tr');
       
-      // Set the Google Translate cookie for the whole domain
       if (lang === 'en') {
           setCookie('googtrans', '/tr/en', 30);
       } else if (lang === 'ru') {
           setCookie('googtrans', '/tr/ru', 30);
       } else {
-          setCookie('googtrans', '/tr/tr', 30);
-          // Also clear it to be safe
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+          deleteCookie('googtrans');
       }
       
-      // Reload page to apply translation cleanly across all pages
       window.location.reload();
     });
   });
