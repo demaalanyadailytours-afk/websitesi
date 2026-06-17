@@ -351,13 +351,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const lang = opt.getAttribute('data-lang');
       clearGoogtransCookies();
       
-      let url = window.location.pathname + window.location.search;
-      if (lang === 'tr') {
-        window.location.assign(url);
-      } else {
+      if (lang !== 'tr') {
         setCookie('googtrans', '/tr/' + lang, 30);
-        window.location.assign(url + '#googtrans(tr|' + lang + ')');
       }
+      
+      if (window.location.hash.includes('googtrans')) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      
       setTimeout(() => {
         window.location.reload();
       }, 50);
