@@ -121,7 +121,7 @@ function updateTotal() {
   
   // Child 0-6 is free
   const total = (adults * adultPrice) + (child7 * child7Price);
-  totalDisplay.innerText = total.toFixed(2) + ' ₺';
+  totalDisplay.innerText = Math.round(total) + ' €';
 }
 
 spinners.forEach(spinner => {
