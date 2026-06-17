@@ -370,6 +370,30 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLangText.textContent = code === 'TR' ? 'TR' : code;
   }
 
+  // --- Dynamic Flag Icons Injection ---
+  const flagLink = document.createElement('link');
+  flagLink.rel = 'stylesheet';
+  flagLink.href = 'https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css';
+  document.head.appendChild(flagLink);
+
+  const langMap = {
+    'tr': 'tr', 'en': 'gb', 'ru': 'ru', 'pl': 'pl', 'et': 'ee',
+    'hu': 'hu', 'sk': 'sk', 'lt': 'lt', 'de': 'de', 'fr': 'fr'
+  };
+  const langText = {
+    'tr': 'TR - Türkçe', 'en': 'EN - English', 'ru': 'RU - Русский',
+    'pl': 'PL - Polski', 'et': 'ET - Eesti', 'hu': 'HU - Magyar',
+    'sk': 'SK - Slovenčina', 'lt': 'LT - Lietuvių', 'de': 'DE - Deutsch',
+    'fr': 'FR - Français'
+  };
+
+  document.querySelectorAll('.lang-dropdown-content a').forEach(a => {
+    const l = a.getAttribute('data-lang');
+    if (l && langMap[l] && langText[l]) {
+      a.innerHTML = `<span class="fi fi-${langMap[l]}" style="margin-right:5px; border-radius:2px;"></span> ${langText[l]}`;
+    }
+  });
+
   // --- Dropdown Logic ---
   const activityDropBtn = document.getElementById('activityDropBtn');
   const activityDropContent = document.getElementById('activityDropContent');

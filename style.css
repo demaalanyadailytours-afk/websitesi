@@ -2079,6 +2079,22 @@ html, body {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .lang-dropdown-content {
+    min-width: 250px;
+    right: -10px;
+  }
+  .lang-dropdown-content.show {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+  .lang-dropdown-content a {
+    padding: 10px 8px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(10,37,88,0.05);
+  }
+}
+
 /* FIX LOGO SIZE OVERRIDE ON MOBILE */
 @media (max-width: 768px) {
   .logo-img {
