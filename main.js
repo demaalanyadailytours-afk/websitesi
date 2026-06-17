@@ -353,12 +353,14 @@ document.addEventListener('DOMContentLoaded', () => {
       
       let url = window.location.pathname + window.location.search;
       if (lang === 'tr') {
-        window.location.href = url;
+        window.location.assign(url);
       } else {
         setCookie('googtrans', '/tr/' + lang, 30);
-        window.location.href = url + '#googtrans(tr|' + lang + ')';
+        window.location.assign(url + '#googtrans(tr|' + lang + ')');
       }
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 50);
     }
   });
 

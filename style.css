@@ -2112,3 +2112,25 @@ html, body {
     justify-content: flex-start !important;
   }
 }
+
+/* HIDE GOOGLE TRANSLATE BANNER */
+.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+.goog-te-banner-frame {
+  display: none !important;
+}
+.goog-tooltip {
+  display: none !important;
+}
+.goog-tooltip:hover {
+  display: none !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
