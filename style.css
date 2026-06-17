@@ -390,10 +390,12 @@ a  { text-decoration: none; color: inherit; }
   white-space: nowrap;
 }
 
-.btn-primary:hover {
-  background: var(--blue);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(30,107,184,0.50);
+@media (hover: hover) {
+  .btn-primary:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(30,107,184,0.50);
+  }
 }
 
 /* GHOST BUTTON */
@@ -616,9 +618,11 @@ a  { text-decoration: none; color: inherit; }
   flex-direction: column;
 }
 
-.tour-card-new:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+@media (hover: hover) {
+  .tour-card-new:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  }
 }
 
 .tour-card-img-new {
@@ -695,8 +699,10 @@ a  { text-decoration: none; color: inherit; }
   transition: opacity 0.2s;
 }
 
-.btn-book:hover {
-  opacity: 0.9;
+@media (hover: hover) {
+  .btn-book:hover {
+    opacity: 0.9;
+  }
 }
 
 .btn-book.blue { background: #1a4f8b; }
@@ -1768,9 +1774,11 @@ body { top: 0px !important; }
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(37,211,102,0.4);
 }
-.promo-btn:hover {
-  transform: translateY(-3px);
-  background: #128c7e;
+@media (hover: hover) {
+  .promo-btn:hover {
+    transform: translateY(-3px);
+    background: #128c7e;
+  }
 }
 .promo-banner.premium::before {
   background: linear-gradient(to right, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.5) 100%);
