@@ -1823,7 +1823,7 @@ body { top: 0px !important; position: relative !important; }
 
 
 /* HIDE HORIZONTAL SCROLL ON MOBILE */
-html, body {
+body {
   max-width: 100% !important;
   overflow-x: hidden !important;
   width: 100%;
@@ -1987,7 +1987,7 @@ html, body {
 
 /* ROBUST MOBILE OVERFLOW PROTECTION FOR ALL PAGES */
 @media (max-width: 768px) {
-  html, body {
+  body {
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100vw !important;
