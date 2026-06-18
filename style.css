@@ -475,6 +475,7 @@ a  { text-decoration: none; color: inherit; }
   z-index: 10;
   margin-top: -150px;
   padding: 0 24px;
+  pointer-events: none;
 }
 
 .features-inner {
@@ -488,6 +489,7 @@ a  { text-decoration: none; color: inherit; }
   align-items: stretch;
   gap: 0;
   padding: 0 16px;
+  pointer-events: auto;
 }
 
 .feature-item {
