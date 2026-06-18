@@ -618,7 +618,7 @@ a  { text-decoration: none; color: inherit; }
   flex-direction: column;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .tour-card-new:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.12);
@@ -703,7 +703,7 @@ a  { text-decoration: none; color: inherit; }
   z-index: 3;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .btn-book:hover {
     opacity: 0.9;
   }
@@ -732,11 +732,13 @@ a  { text-decoration: none; color: inherit; }
   z-index: 3;
 }
 
-.btn-outline-primary:hover {
-  background: var(--blue);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30,107,184,0.3);
+@media (hover: hover) and (pointer: fine) {
+  .btn-outline-primary:hover {
+    background: var(--blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30,107,184,0.3);
+  }
 }
 
 /* ─── ACTIVITIES SECTION ────────────────────────────────────── */
@@ -767,8 +769,10 @@ a  { text-decoration: none; color: inherit; }
   min-width: 120px;
 }
 
-.activity-item:hover {
-  transform: translateY(-8px);
+@media (hover: hover) and (pointer: fine) {
+  .activity-item:hover {
+    transform: translateY(-8px);
+  }
 }
 
 .activity-icon-wrap {
