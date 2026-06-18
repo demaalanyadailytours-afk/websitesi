@@ -35,7 +35,7 @@
   --shadow-btn:  0 4px 16px rgba(30,107,184,0.35);
 }
 
-html { scroll-behavior: smooth; }
+html { }
 
 body {
   font-family: 'Inter', sans-serif;
