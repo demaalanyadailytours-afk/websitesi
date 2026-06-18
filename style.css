@@ -2148,3 +2148,22 @@ body {
   border: none !important;
   box-shadow: none !important;
 }
+
+
+/* --- MOBILE CLICK & INPUT FIXES --- */
+a, button, input[type="submit"], input[type="button"], .btn, .bw-btn-whatsapp {
+  touch-action: manipulation !important;
+  cursor: pointer;
+}
+
+input, textarea, select {
+  -webkit-user-select: auto !important;
+  user-select: auto !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure nothing covers inputs invisibly */
+.phone-input-wrap, .form-group input, .form-group select {
+  position: relative;
+  z-index: 10;
+}
