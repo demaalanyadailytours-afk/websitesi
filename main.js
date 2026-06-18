@@ -384,10 +384,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'hu': 'hu', 'sk': 'sk', 'lt': 'lt', 'de': 'de', 'fr': 'fr'
   };
   const langText = {
-    'tr': 'TR - Türkçe', 'en': 'EN - English', 'ru': 'RU - Русский',
-    'pl': 'PL - Polski', 'et': 'ET - Eesti', 'hu': 'HU - Magyar',
-    'sk': 'SK - Slovenčina', 'lt': 'LT - Lietuvių', 'de': 'DE - Deutsch',
-    'fr': 'FR - Français'
+    'tr': 'TR', 'en': 'EN', 'ru': 'RU',
+    'pl': 'PL', 'et': 'ET', 'hu': 'HU',
+    'sk': 'SK', 'lt': 'LT', 'de': 'DE',
+    'fr': 'FR'
   };
 
   document.querySelectorAll('.lang-dropdown-content a').forEach(a => {
