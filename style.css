@@ -41,7 +41,6 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--text-dark);
   background: var(--off-white);
-  overflow-x: hidden;
 }
 
 img { display: block; max-width: 100%; }
@@ -1477,12 +1476,14 @@ a  { text-decoration: none; color: inherit; }
     opacity: 0;
     transition: all 0.3s;
     pointer-events: none;
+    visibility: hidden;
   }
 
   .nav-menu.open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
+    visibility: visible;
   }
 
   .hamburger { display: flex; }
@@ -1815,7 +1816,7 @@ body { top: 0px !important; }
 iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
 .goog-te-banner-frame { display: none !important; visibility: hidden !important; }
 .goog-te-banner-frame.skiptranslate { display: none !important; }
-body { top: 0px !important; position: relative !important; }
+body { top: 0px !important; position: static !important; }
 .VIpgJd-ZVi9od-ORHb-OEVmcd { display: none !important; }
 .VIpgJd-ZVi9od-aZ2wEe-wOHMyf { display: none !important; }
 #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
@@ -1825,7 +1826,6 @@ body { top: 0px !important; position: relative !important; }
 /* HIDE HORIZONTAL SCROLL ON MOBILE */
 body {
   max-width: 100% !important;
-  overflow-x: hidden !important;
   width: 100%;
 }
 
@@ -1988,7 +1988,6 @@ body {
 /* ROBUST MOBILE OVERFLOW PROTECTION FOR ALL PAGES */
 @media (max-width: 768px) {
   body {
-    overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100vw !important;
   }
