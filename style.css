@@ -2384,3 +2384,41 @@ input, textarea, select {
     gap: 16px;
   }
 }
+
+/* --- HORIZONTAL IMAGE SLIDER (GALLERY) --- */
+.gallery-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 12px;
+  padding: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.gallery-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.gallery-slider::-webkit-scrollbar-thumb {
+  background: var(--blue, #0a2558);
+  border-radius: 4px;
+}
+.gallery-slider img {
+  scroll-snap-align: start;
+  flex: 0 0 85%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.gallery-slider img:hover {
+  transform: scale(1.02);
+}
+@media (min-width: 768px) {
+  .gallery-slider img {
+    flex: 0 0 calc(33.333% - 8px);
+    height: 200px;
+  }
+}
