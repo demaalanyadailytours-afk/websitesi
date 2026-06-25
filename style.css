@@ -2383,6 +2383,15 @@ input, textarea, select {
     grid-template-columns: 1fr !important;
     gap: 16px;
   }
+  .gallery-main {
+    height: auto !important;
+    margin-bottom: 0px !important;
+  }
+  .gallery-main img {
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover !important;
+  }
 }
 
 /* --- HORIZONTAL IMAGE SLIDER (GALLERY) --- */
